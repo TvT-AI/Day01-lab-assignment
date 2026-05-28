@@ -9,36 +9,36 @@
 ### Bài tập 2.1 — Độ Nhạy Của Temperature
 
 **Bạn nhận thấy quy luật gì qua bốn phản hồi?**
-Khi temperature thấp (0.0), phản hồi của mô hình ổn định, ngắn gọn và ít thay đổi giữa các lần chạy. Khi temperature tăng lên 1.0 và 1.5, câu trả lời trở nên đa dạng, sáng tạo hơn nhưng cũng dễ lan man hoặc ít chính xác hơn. Temperature càng cao thì mức độ ngẫu nhiên trong quá trình sinh text càng lớn.
+Khi temperature thấp ví dụ như 0 thì spam câu hỏi qua nhiều lần câu trả lời k khác nhau là mấy. Khi temperature tăng lên câu trả lời trở nên đa dạng, sáng tạo hơn nhưng cũng dễ ảo tưởng. Temperature càng cao thì mức độ ngẫu nhiên trong quá trình sinh text càng lớn.
 
 **Bạn sẽ đặt temperature bao nhiêu cho chatbot hỗ trợ khách hàng, và tại sao?**
-Tôi sẽ chọn temperature khoảng 0.2–0.5 cho chatbot hỗ trợ khách hàng vì cần phản hồi ổn định, nhất quán và hạn chế tạo ra thông tin sai lệch. Mức temperature thấp giúp chatbot trả lời đáng tin cậy hơn.
+chọn thấp 0-0.2 để rag bớt bịa chuyện, ưu tiên trả lời chính xác.
 
 ---
 
 ### Bài tập 2.2 — Đánh Đổi Chi Phí
 
 **Ước tính xem GPT-4o đắt hơn GPT-4o-mini bao nhiêu lần cho workload này:**
-Giả sử mỗi ngày có:
+nếu mà mỗi ngày có:
 
-* 10.000 người dùng
-* 3 requests/người
-* 350 token/request
+* 10.000 ng dùng
+* 3 req/ng
+* 350 token/req
 
-Tổng số token mỗi ngày:
+Tổng ngày:
 
 10.000 × 3 × 350 = 10.500.000 tokens
 
-Theo bảng giá:
+Theo giá:
 
 * GPT-4o: $0.010 / 1K output tokens
 * GPT-4o-mini: $0.0006 / 1K output tokens
 
-Tỷ lệ chi phí:
+Chi phí:
 
 0.010 / 0.0006 ≈ 16.7 lần
 
-Như vậy GPT-4o đắt hơn khoảng 16–17 lần so với GPT-4o-mini cho cùng workload.
+GPT-4o đắt hơn khoảng 16–17 lần so với GPT-4o-mini cho cùng workload.
 
 **Mô tả một trường hợp mà chi phí cao hơn của GPT-4o là xứng đáng, và một trường hợp GPT-4o-mini là lựa chọn tốt hơn:**
 GPT-4o phù hợp cho các tác vụ yêu cầu suy luận mạnh và độ chính xác cao như trợ lý lập trình, phân tích tài liệu hoặc hỗ trợ chuyên môn. GPT-4o-mini phù hợp cho chatbot FAQ, ứng dụng phản hồi nhanh hoặc hệ thống có lượng request lớn cần tối ưu chi phí.
@@ -47,7 +47,7 @@ GPT-4o phù hợp cho các tác vụ yêu cầu suy luận mạnh và độ chí
 
 ### Bài tập 2.3 — Trải Nghiệm Người Dùng với Streaming
 
-Streaming đặc biệt quan trọng trong các ứng dụng chatbot hoặc trợ lý AI thời gian thực vì người dùng có thể thấy phản hồi xuất hiện ngay lập tức thay vì phải chờ toàn bộ câu trả lời hoàn thành. Điều này giúp trải nghiệm tự nhiên hơn và giảm cảm giác delay. Ngược lại, non-streaming phù hợp hơn khi cần xử lý ngắn gọn, trả về kết quả hoàn chỉnh một lần hoặc khi hệ thống cần hậu xử lý toàn bộ output trước khi hiển thị cho người dùng.
+Streaming đặc biệt quan trọng trong các ứng dụng chatbot hoặc trợ lý AI thời gian thực vì người dùng có thể thấy phản hồi xuất hiện ngay lập tức thay vì phải chờ toàn bộ câu trả lời hoàn thành, làm trải nghiệm tự nhiên với giảm delay. Ngược lại, non-streaming khi cần xử lý ngắn gọn, trả về kết quả hoàn chỉnh một lần hoặc khi hệ thống cần hậu xử lý toàn bộ output trước khi hiển thị cho người dùng.
 
 ---
 
